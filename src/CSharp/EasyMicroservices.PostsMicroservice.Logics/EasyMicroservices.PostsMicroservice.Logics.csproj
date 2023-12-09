@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <RootNamespace>EasyMicroservices.PostsMicroservice</RootNamespace>
+  </PropertyGroup>
+  
+  <ItemGroup>
+  </ItemGroup>
+  
+  <ItemGroup>
+    <Folder Include="DatabaseLogics\" />
+    <Folder Include="Interfaces\" />
+    <Folder Include="Mappers\" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\EasyMicroservices.PostsMicroservice.Database\EasyMicroservices.PostsMicroservice.Database.csproj" />
+  </ItemGroup>
+  
+</Project>
