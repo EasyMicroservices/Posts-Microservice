@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.0;netstandard2.1;net6.0;net7.0</TargetFrameworks>
+    <Platforms>AnyCPU;x64;x86</Platforms>
+    <Authors>EasyMicroservices</Authors>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Version>0.0.0.1</Version>
+    <Description>client generated code.</Description>
+    <Copyright>EasyMicroservices@gmail.com</Copyright>
+    <PackageTags>microservice,article,articles,media,text,content,posts,post,client,contents</PackageTags>
+    <PackageProjectUrl>https://github.com/EasyMicroservices/Posts-Microservice</PackageProjectUrl>
+    <LangVersion>latest</LangVersion>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <DocumentationFile>.\bin\$(Configuration)\$(TargetFramework)\EasyMicroservices.PostsMicroservice.Clients.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="EasyMicroservices.Cores.Clients" Version="0.0.0.63" />
+    
+  </ItemGroup>
+  
+  <ItemGroup Condition="'$(TargetFramework)' == 'net45'">
+    <PackageReference Include="System.Net.Http" Version="4.3.4" />
+  </ItemGroup>
+</Project>
