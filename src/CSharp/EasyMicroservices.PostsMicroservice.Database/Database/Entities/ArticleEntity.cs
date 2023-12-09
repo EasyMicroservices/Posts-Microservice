@@ -9,5 +9,6 @@ namespace EasyMicroservices.PostsMicroservice.Database.Entities
         public long Id { get; set; }
 
         public ICollection<ArticleCategoryEntity> ArticleCategories { get; set; }
+        public ICollection<ArticleAuthorEntity> ArticleAuthors { get; set; }
     }
 }

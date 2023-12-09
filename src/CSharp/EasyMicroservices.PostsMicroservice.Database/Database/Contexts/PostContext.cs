@@ -14,7 +14,9 @@ namespace EasyMicroservices.PostsMicroservice.Database.Contexts
         public DbSet<ArticleEntity> Articles { get; set; }
         public DbSet<ArticleCategoryEntity> ArticleCategories { get; set; }
         public DbSet<CategoryEntity> Categories { get; set; }
-
+        public DbSet<AuthorEntity> Authors { get; set; }
+        public DbSet<ArticleAuthorEntity> ArticleAuthors { get; set; }
+        
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.AutoModelCreating(modelBuilder);
@@ -22,6 +24,11 @@ namespace EasyMicroservices.PostsMicroservice.Database.Contexts
             modelBuilder.Entity<ArticleCategoryEntity>(entity =>
             {
                 entity.HasKey(x => new { x.ArticleId, x.CategoryId });
+            });
+
+            modelBuilder.Entity<ArticleAuthorEntity>(entity =>
+            {
+                entity.HasKey(x => new { x.ArticleId, x.AuthorId });
             });
         }
     }
